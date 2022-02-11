@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: #2C3A47 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.treasure {
+    height: 300px;
+    width: 250px;
+    position: relative;
+    border: 5px solid #6D214F;
+    perspective: 1000px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.door {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background-color: #F8EFBA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left_door {
+    top: 0;
+    left: 0;
+    border-right: 2px solid #b33939;
+    transform-origin: left;
+    transition: transform 0.6s;
+}
+
+.right_door {
+    top: 0;
+    right: 0;
+    border-left: 2px solid #b33939;
+    transform-origin: right;
+    transition: transform 0.6s;
+}
+
+.shape {
+    border: 5px solid #0c2461;
+    width: 100px;
+    height: 130px;
+}
+
+.knob {
+    height: 50px;
+    width: 10px;
+    position: absolute;
+    background-color: #d35400;
+}
+
+#left-knob {
+    right: 15px;
+}
+
+#right-knob {
+    left: 16px;
+}
+
+
+/* Door Open */
+.open_left_door {
+    transform: rotateY(-140deg);
+}
+
+.open_right_door {
+    transform: rotateY(140deg);
+}
